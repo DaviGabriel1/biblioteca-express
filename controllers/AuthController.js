@@ -1,3 +1,4 @@
+const { where } = require("sequelize")
 const User = require("../models/User")
 const bcrypt = require("bcryptjs")
 
@@ -56,7 +57,34 @@ module.exports = class AuthController{
             console.log(`erro ao cadastrar: ${err}`)
         }        
     }
-    static loginPost(req,res){
+    static async loginPost(req,res){
+        const {email, password} = req.body;
+        const userLogin = await User.findOne({where: {email:email}})
+        if(!userLogin){
+            req.flash('message','usuário não encontrado!')
+            res.render("auth/login")
+
+            return
+        }
+        console.log(userLogin)
+        const passwordMatch = bcrypt.compareSync(password,userLogin.password)
+        if(!passwordMatch){
+            req.flash('message','senha invalida!')
+            res.render("auth/login")
+
+            return
+        }
+        req.session.userid = userLogin.id
+        
+        req.flash("message","autenticação realizada com sucesso!")
+
+        req.session.save(() => {
+            res.redirect("/")
+        })
+    }
+
+    static logout(req,res){
+        req.session.destroy()
         res.redirect("/")
     }
 }

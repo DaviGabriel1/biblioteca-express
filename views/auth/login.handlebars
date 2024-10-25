@@ -8,12 +8,11 @@
 <link rel="stylesheet" href="css/login/login.css">
 <form action="/login" method="post">
         <label class="form-label" for="email">email:</label>
-        <input class="form-control" type="email" placeholder="digite o seu email..." id="email" required>  
+        <input class="form-control" type="email" placeholder="digite o seu email..." id="email" name="email" required>  
 
-        <label class="form-label" for="senha">senha:</label>
-        <input class="form-control" type="password" placeholder="digite a sua senha..." id="senha" required>
+        <label class="form-label" for="password ">senha:</label>
+        <input class="form-control" type="password" placeholder="digite a sua senha..." id="senha" name="password" required>
         <a href="/register"
            style=" display: flex; align-self: flex-end;  text-align: end;">eu não tenho cadastro</a>
-        <span>mensagem de erro</span>
         <input type="submit" value="Entrar" id="botao" class="form-conteudo">
 </form>

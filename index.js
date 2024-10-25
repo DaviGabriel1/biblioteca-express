@@ -59,10 +59,11 @@ const conn = require("./db/conn");
 //import routes
 const authRoutes = require("./routes/authRoutes")
 const bookRoutes = require("./routes/bookRoutes")
-
+const userRoutes = require("./routes/userRoutes")
 //rotas
 app.use("/",bookRoutes)
 app.use("/",authRoutes)
+app.use("/",userRoutes)
 
 /*Book.create({
     title:"1984",
