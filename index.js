@@ -56,13 +56,13 @@ const porta = process.env.PORT || 3000;
 
 const conn = require("./db/conn");
 
-//controllers
-const BooksController = require("./controllers/BooksController");
+//import routes
+const authRoutes = require("./routes/authRoutes")
+const bookRoutes = require("./routes/bookRoutes")
+
 //rotas
-
-
-//apps
-app.get("/",BooksController.showBooks)
+app.use("/",bookRoutes)
+app.use("/",authRoutes)
 
 /*Book.create({
     title:"1984",

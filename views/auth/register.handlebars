@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="css/register/register.css">
+<h1>Cadastro</h1>
+<form action="/register" method="post">
+    <label class="form-label" for="first_name">Primeiro nome*:</label>
+    <input type="text" id="primeiro-nome" class="form-control" placeholder="Digite o primeiro nome..." name="first_name" required>
+    <label class="form-label" for="last_name">Ultimo nome*:</label>
+    <input type="text" id="ultimo-nome" class="form-control" name="last_name" placeholder="digite o ultimo nome..." required>
+    <label class="form-label" for="email">Email*:</label>
+    <input type="text" id="email" class="form-control" name="email" placeholder="digite o seu email..." required>
+    <label class="form-label" for="password">senha*:</label>
+    <input type="password" id="senha" class="form-control" name="password" placeholder="digite a sua senha..." required>
+    <label class="form-label" for="confirm_password">confirmar senha*:</label>
+    <input type="password" id="confirma-senha" class="form-control" name="confirm_password" placeholder="confirme a sua senha" required>
+
+    <div class="form-check" style="margin-top: 10px">
+        <label class="form-check-label" id="text-aceito"> aceito os termos de uso dos meus dados</label>
+        <input type="checkbox" id="confirma-termos" class="form-check-input" required>
+    </div>
+
+    <div style="text-align: end; margin-bottom: 15px; margin-top: -10px">
+        <a href="/login">Já tenho uma conta</a>
+    </div>
+    <input type="submit" value="Cadastrar" id="button">
+</form>
