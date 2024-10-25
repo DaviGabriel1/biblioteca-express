@@ -146,3 +146,8 @@ a{
     justify-self: end;
     font-size: 12px;
 }
+#flash-message{
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+}

@@ -6,7 +6,7 @@ const Comment = require("../models/Comment")
 const Order = require("../models/Order")
 
 const User = db.define("User",{
-    FirstName:{
+    firstName:{
         type:DataTypes.STRING,
         allowNull:false,
         require:true
