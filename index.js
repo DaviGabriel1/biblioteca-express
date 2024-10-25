@@ -46,7 +46,10 @@ app.use((req,res,next) => {
     next()
 })
 
-
+const User = require("./models/User")
+const Book = require("./models/Book")
+const Order = require("./models/Order")
+const Comment = require("./models/Comment")
 
 const porta = process.env.PORT || 3000;
 
