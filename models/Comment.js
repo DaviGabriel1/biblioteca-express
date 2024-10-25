@@ -4,7 +4,7 @@ const db = require("../db/conn")
 
 const Comment = db.define("Comment",{
     text:{
-        type:DataTypes.STRING,
+        type:DataTypes.TEXT,
         require:true,
         allowNull:false
     },
@@ -14,7 +14,7 @@ const Comment = db.define("Comment",{
         allowNull:false
     },
     rating:{
-        type:DataTypes.STRING,
+        type:DataTypes.SMALLINT,
         require:true,
         allowNull:false
     }

@@ -4,12 +4,12 @@ const db = require("../db/conn")
 
 const Order = db.define("Order", {
     rental_date:{
-        type:DataTypes.DATE,
+        type:DataTypes.DATEONLY,
         require:true,
         allowNull:false
     },
     return_date:{
-        type:DataTypes.DATE,
+        type:DataTypes.DATEONLY,
         require:true,
         allowNull:false
     },

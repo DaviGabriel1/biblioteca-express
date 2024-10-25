@@ -12,12 +12,12 @@ const Book = db.define("Book",{
         require:true
     },
     description:{
-        type:DataTypes.STRING,
+        type:DataTypes.TEXT,
         allowNull:false,
         require:true
     },
     date:{
-        type:DataTypes.DATE,
+        type:DataTypes.DATEONLY,
         allowNull:false,
         require:true
     },
@@ -32,7 +32,7 @@ const Book = db.define("Book",{
         require:true
     },
     pageQty:{
-        type:DataTypes.STRING,
+        type:DataTypes.BIGINT,
         allowNull:false,
         require:true
     },

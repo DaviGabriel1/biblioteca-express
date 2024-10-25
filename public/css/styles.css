@@ -1,0 +1,148 @@
+/*HEADER*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+:root{
+    --cor-primaria:rgb(255, 255, 255);
+    --cor-secundaria:rgb(124, 47, 47);
+    --cor-texto:rgb(0, 0, 0);
+    --cor-detalhes: rgb(109, 108, 108);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+header{
+    padding: 3vh 0;
+    width: 100vw;
+    height: 20vh;
+    background-color: var(--cor-secundaria);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    margin-left: 20px;
+}
+#search{
+    height: 70px;
+    width: 60vw;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+    padding-left:60px;
+    outline: none;
+}
+#logo-pesquisa{
+    position: relative;
+    left: 55px;
+    top: 15px;
+}
+.icons{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+svg{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/*PRODUTOS*/
+
+.produto{
+    width: 177px;
+    height: 233px;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.produto-layout{
+    width: 230px;
+    height: 450px;
+    border: solid 1px rgb(214, 211, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin: 5px 28px 5px 28px;
+}
+.produto-layout:hover{
+    transform: scale(1.05);
+    box-shadow: 3px 2px rgb(214, 211, 211);
+}
+
+.titulo{
+    font-weight: bold;
+    font-size: 20px;
+    height: 70px;
+}
+.btn-alugar{
+    margin-top:10px;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 15px;
+    background:transparent;
+    border: 1px solid rgb(124, 47, 47);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.btn-alugar:hover{
+    transform: scale(1.05);
+    background-color:rgb(124, 47, 47);
+    color: white;
+}
+
+.produtos-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.detalhes{
+    color: rgb(109, 108, 108)
+}
+
+.descricao{
+    display: none;
+}
+
+/*FOOTER*/
+
+#rodape-home{
+    background-color: rgb(124, 47, 47);
+    color: white ;
+    height: auto;
+    padding: 1% 5% 1% 5%;
+    width: 100%;
+}
+.rodape-titulo{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+    margin-top: 45px;
+    font-size: 18px;
+}
+.rodape-texto{
+    font-size: 15px;
+}
+.rodape-info{
+    justify-self: end;
+    font-size: 12px;
+}

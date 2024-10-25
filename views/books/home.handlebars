@@ -1,0 +1,14 @@
+{{#each books}}
+    <a href="/book/{{this.id}}">
+        <div class="produto-layout">
+            <img src="{{this.imgUrl}}" alt="" class="produto imgProduto">
+            <span class="titulo">{{this.title}}</span>
+            <br><span class="autor">{{this.author}}</span>
+            <br><div class="detalhes"><span class="data">{{this.date}}</span> - <span class="quant-pags">{{this.pageQty}}</span> paginas</div>
+            <div class="descricao">{{this.description}}</div>
+            <form action="/addcart" method="get">
+                <input type="submit" class="btn-alugar" value="colocar no carrinho"></input>
+            </form>
+        </div>
+    </a>
+{{/each}}

@@ -46,6 +46,7 @@ app.use((req,res,next) => {
     next()
 })
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 const User = require("./models/User")
 const Book = require("./models/Book")
 const Order = require("./models/Order")
@@ -55,6 +56,35 @@ const porta = process.env.PORT || 3000;
 
 const conn = require("./db/conn");
 
+//controllers
+const BooksController = require("./controllers/BooksController");
+//rotas
+
+
+//apps
+app.get("/",BooksController.showBooks)
+
+/*Book.create({
+    title:"1984",
+    description:`Publicada originalmente em 1949, a distopia futurista 1984 é um dos romances mais influentes do século XX, um inquestionável clássico moderno. Lançada poucos meses antes da morte do autor, é uma obra magistral que ainda se impõe como uma poderosa reflexão ficcional sobre a essência nefasta de qualquer forma de poder totalitário.
+
+                    Winston, herói de 1984 , último romance de George Orwell, vive aprisionado na engrenagem totalitária de uma sociedade completamente dominada pelo Estado, onde tudo é feito coletivamente, mas cada qual vive sozinho. Ninguém escapa à vigilância do Grande Irmão, a mais famosa personificação literária de um poder cínico e cruel ao infinito, além de vazio de sentido histórico. De fato, a ideologia do Partido dominante em Oceânia não visa nada de coisa alguma para ninguém, no presente ou no futuro. O'Brien, hierarca do Partido, é quem explica a Winston que "só nos interessa o poder em si. Nem riqueza, nem luxo, nem vida longa, nem felicidade: só o poder pelo poder, poder puro".
+                    Quando foi publicada em 1949, essa assustadora distopia datada de forma arbitrária num futuro perigosamente próximo logo experimentaria um imenso sucesso de público. Seus principais ingredientes - um homem sozinho desafiando uma tremenda ditadura; sexo furtivo e libertador; horrores letais - atraíram leitores de todas as idades, à esquerda e à direita do espectro político, com maior ou menor grau de instrução. À parte isso, a escrita translúcida de George Orwell, os personagens fortes, traçados a carvão por um vigoroso desenhista de personalidades, a trama seca e crua e o tom de sátira sombria garantiram a entrada precoce de 1984 no restrito panteão dos grandes clássicos modernos.
+                    
+                    "O maior escritor do século XX." -  Observer
+                    
+                    "Obra-prima terminal de Orwell, 1984 é uma leitura absorvente e indispensável para a compreensão da história moderna." - Timothy Garton Ash,  New York Review of Books
+                    
+                    " A obra mais sólida e mais impressionante de Orwell." - V. S. Pritchett`,
+    date:"2009-07-21",
+    imgUrl:"img/Capa 1984.png",
+    author:"George Orwell",
+    pageQty:416,
+    genre:"ficcao cientifica"
+}
+)*/
+
+        //{force:true}
 conn.sync().then(() => {
     app.listen(porta,() => {console.log(`servidor rodando na porta ${porta}...`)})
 }).catch((err) => console.log(err))
