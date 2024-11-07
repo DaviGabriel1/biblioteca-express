@@ -18,6 +18,11 @@ const Order = db.define("Order", {
         require:true,
         allowNull:false
     },
+    address:{
+        type:DataTypes.STRING,
+        require:true,
+        allowNull:false
+    },
 
 })
 

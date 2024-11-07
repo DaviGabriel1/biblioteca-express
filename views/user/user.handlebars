@@ -1,1 +1,40 @@
-<h1>Usuario</h1>
+<link rel="stylesheet" href="css/perfil/perfil.css">
+<div id="container-perfil">
+        {{#if user}}
+            {{#if user.imgUrl}}
+                <div id="foto" style="background-image: url('{{user.imgUrl}}');"></div>
+            {{else}}
+                <div id="foto" style="background-image: url('css/perfil/foto-padrao.jpg')"></div>
+            {{/if}}   
+    <div id="infos">        
+            <h2><span id="nome">{{user.firstName}} {{user.lastName}}</span></h2>
+            <span id="email">{{user.email}}</span>
+        {{/if}}
+    </div>
+    <form action="/logout" method="post">
+        <input type="submit" id="btn-sair" class="btn" value="Sair da Conta">
+    </form>
+</div>
+
+<div id="container-livros-alugados">
+    <h1>Livros Alugados</h1>
+    <div id="lista-livros">
+        
+            <div class="user-produto">
+                <img src="{{book.imgUrl}}" alt="" class="produto imgProduto">
+                <span class="titulop" style="font-weight: bold;">{{book.title}}</span>
+                <br><span class="autorp">{{book.author}}</span>
+                <div class="descricaop" style="display: none;">{{book.description}}</div>
+                <div class="campo-remetentep">
+                    <label style="font-weight: bold;">nome do remetente: <br></label><span class="nome">{{user.name}}</span>
+                </div>
+                <div class="campo-enderecop">
+                    <span style="font-weight: bold;">endereço: <br></span><span class="endereco">endereco aleatorio</span>
+                </div>
+                <div class="campo-vencimentop">
+                    <span style="font-weight: bold;">data de vencimento: <br></span><span class="vencimento">data de retorno</span>
+                </div>
+            </div>
+        
+    </div>   
+</div>

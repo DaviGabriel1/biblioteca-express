@@ -14,6 +14,7 @@ app.use(
         extended:true
     })
 )
+
 app.use(express.json())
 //session middleware
 app.use(
@@ -84,6 +85,24 @@ app.use("/",userRoutes)
     genre:"ficcao cientifica"
 }
 )*/
+
+/*Order.create({
+    rental_date:"2024-10-25",
+    return_date:"2024-10-30",
+    status:"rental",
+    address:'rua um, tangamandapio',
+    UserId:1,
+    BookId:1,
+    
+})*/
+
+/*User.create({
+    firstName:"Davi",
+    lastName:"Santos",
+    email:"@gmail.com",
+    password:"123",
+    isAdmin:true
+})*/
 
         //{force:true}
 conn.sync().then(() => {

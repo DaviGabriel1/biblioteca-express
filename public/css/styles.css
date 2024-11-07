@@ -146,8 +146,15 @@ a{
     justify-self: end;
     font-size: 12px;
 }
-#flash-message{
-    color: red;
+.message{
+    padding: 1em;
+    color: #004085;
+    background-color: #cce5ff;
+    border: 1px solid #b8daff;
+    border-radius: 5px;
     text-align: center;
-    margin-top: 20px;
-}
+    margin: 0 auto 2em;
+    max-width: 60%;
+    margin-top: 32px;
+  }
+
